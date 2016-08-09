@@ -1,9 +1,11 @@
 import random
+import sys
 
 userScore = 0
 computerScore = 0
 tieCounter = 0
 playAgain = True
+validator = False
 
 while playAgain == True:
 	userChoice = input("Do you choose rock, paper, or scissors? : ")
@@ -48,8 +50,6 @@ while playAgain == True:
 		userScore = userScore + 1
 
 	print("Overall - You: " + str(userScore) + ". Computer: " + str(computerScore) + ". Ties: " +str(tieCounter) +".")
-
-	validator = False
 	
 	def myFunction():
 		question = input("Do you want to play again? ")
@@ -57,12 +57,11 @@ while playAgain == True:
 			playAgain = True
 			validator = True
 		elif question == "No" or question == "no":
-			playAgain = False
-			validator = True
+			sys.exit()
 		else:
 			print("I didn't understand. Please enter 'Yes' or 'No'.")
 			validator = False
 		print(" ")
 
-	while validator == False:
+	if validator == False:
 		myFunction()
