@@ -7,6 +7,7 @@ playAgain = True
 
 while playAgain == True:
 	userChoice = input("Do you choose rock, paper, or scissors? : ")
+	
 	if userChoice == 'rock' or userChoice == 'Rock':
 		userChoice = 1
 	elif userChoice == 'paper' or userChoice == 'Paper':
