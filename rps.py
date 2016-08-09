@@ -49,6 +49,8 @@ while playAgain == True:
 
 	print("Overall - You: " + str(userScore) + ". Computer: " + str(computerScore) + ". Ties: " +str(tieCounter) +".")
 
+	validator = False
+	
 	def myFunction():
 		question = input("Do you want to play again? ")
 		if question == "Yes" or question == "yes":
@@ -61,8 +63,6 @@ while playAgain == True:
 			print("I didn't understand. Please enter 'Yes' or 'No'.")
 			validator = False
 		print(" ")
-
-	validator = False
 
 	while validator == False:
 		myFunction()
