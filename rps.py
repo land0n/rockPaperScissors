@@ -5,7 +5,6 @@ userScore = 0
 computerScore = 0
 tieCounter = 0
 playAgain = True
-validator = False
 
 while playAgain == True:
 	userChoice = input("Do you choose rock, paper, or scissors? : ")
@@ -51,6 +50,8 @@ while playAgain == True:
 
 	print("Overall - You: " + str(userScore) + ". Computer: " + str(computerScore) + ". Ties: " +str(tieCounter) +".")
 	
+	validator = False
+
 	def myFunction():
 		question = input("Do you want to play again? ")
 		if question == "Yes" or question == "yes":
