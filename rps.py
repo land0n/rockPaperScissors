@@ -4,9 +4,13 @@ import sys
 userScore = 0
 computerScore = 0
 tieCounter = 0
-playAgain = True
+cycle = True
 
-while playAgain == True:
+def game():
+	global userScore
+	global computerScore
+	global tieCounter
+
 	userChoice = input("Do you choose rock, paper, or scissors? : ")
 	
 	if userChoice == 'rock' or userChoice == 'Rock':
@@ -50,18 +54,18 @@ while playAgain == True:
 
 	print("Overall - You: " + str(userScore) + ". Computer: " + str(computerScore) + ". Ties: " +str(tieCounter) +".")
 	
-	validator = False
 
-	def myFunction():
-		question = input("Do you want to play again? ")
-		if question == "Yes" or question == "yes":
-			playAgain = True
-			validator = True
-		elif question == "No" or question == "no":
-			sys.exit()
-		else:
-			print("I didn't understand. Please enter 'Yes' or 'No'.")
-			validator = False
+def playAgain():
+	question = input("Do you want to play again? ")
+	if question == "Yes" or question == "yes":
+		print(" ")
+	elif question == "No" or question == "no":
+		sys.exit()
+	else:
+		print("I didn't understand. Please enter 'Yes' or 'No'.")
+		playAgain()
 
-	while validator == False:
-		myFunction()
+while cycle == True: 
+	game()
+	playAgain()
+
