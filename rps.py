@@ -62,7 +62,6 @@ while playAgain == True:
 		else:
 			print("I didn't understand. Please enter 'Yes' or 'No'.")
 			validator = False
-		print(" ")
 
-	if validator == False:
+	while validator == False:
 		myFunction()
